@@ -108,7 +108,8 @@ export const videoScript = {
     {
       id: "weekly-report",
       type: "dashboard",
-      visualVariant: "report",
+      visualVariant: "screenshot",
+      image: "assets/weekly.png",
       mood: "wink",
       durationSec: 7,
       title: "주간 보고, 가볍게",
@@ -243,7 +244,8 @@ export const videoScript = {
     {
       id: "for-managers",
       type: "dashboard",
-      visualVariant: "report",
+      visualVariant: "screenshot",
+      image: "assets/report.png",
       durationSec: 7,
       title: "관리자에게도 좋아요",
       subtitle: "감이 아니라 데이터로 판단해요.",

@@ -121,7 +121,6 @@ a:focus-visible { outline: 2px solid var(--coral); outline-offset: 5px; }
 .film-intro { display: grid; grid-template-columns: 1fr .55fr; align-items: end; gap: 50px; margin-bottom: 44px; }
 .film-intro h2 { margin-top: 18px; }
 .film-intro > p { margin: 0 0 4px; color: var(--dark-muted); font-size: 15px; line-height: 1.85; word-break: keep-all; }
-.film-stage { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 28px; align-items: start; }
 .film-frame { position: relative; overflow: hidden; border: 1px solid #ffffff2e; border-radius: 18px; background: #1a2225; box-shadow: 0 40px 90px -30px #000c, 0 0 0 6px #ffffff0a; }
 .film-frame > video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #0b1422; }
 .film-meta { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-top: 22px; }
@@ -132,17 +131,6 @@ a:focus-visible { outline: 2px solid var(--coral); outline-offset: 5px; }
 .film-chapters button { display: inline-flex; gap: 8px; align-items: center; padding: 8px 14px; border: 1px solid #ffffff26; border-radius: 999px; background: #ffffff0d; color: #e8eef2; font: inherit; font-size: 13px; cursor: pointer; transition: background .2s, border-color .2s; }
 .film-chapters button span { color: #ffc94d; font-variant-numeric: tabular-nums; font-weight: 700; }
 .film-chapters button:hover, .film-chapters button:focus-visible { border-color: #5fd3bf; background: #5fd3bf1f; outline: none; }
-.film-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
-.film-card { display: grid; gap: 12px; width: 100%; padding: 12px; border: 1px solid #ffffff1f; border-radius: 16px; background: #ffffff08; color: inherit; font: inherit; text-align: left; cursor: pointer; transition: transform .2s, border-color .2s, background .2s; }
-.film-card:hover, .film-card:focus-visible { transform: translateY(-2px); border-color: #ffffff4d; outline: none; }
-.film-card.is-active { border-color: #5fd3bf; background: #5fd3bf14; }
-.film-thumb { position: relative; display: block; overflow: hidden; border-radius: 10px; }
-.film-thumb img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
-.film-time { position: absolute; right: 8px; bottom: 8px; padding: 3px 8px; border-radius: 6px; background: #0b1422d9; font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; }
-.film-card.is-active .film-thumb::after { content: "재생 중"; position: absolute; top: 8px; left: 8px; padding: 3px 9px; border-radius: 999px; background: #5fd3bf; color: #0b1422; font-size: 11px; font-weight: 800; }
-.film-card-copy { display: grid; gap: 4px; padding: 0 4px 4px; }
-.film-card-copy strong { font-size: 16px; letter-spacing: -.03em; }
-.film-card-copy span { color: var(--dark-muted); font-size: 13px; line-height: 1.5; word-break: keep-all; }
 
 .closing { padding: 118px 0 126px; }
 .closing-inner { display: grid; grid-template-columns: .3fr 1fr .56fr; gap: 42px; align-items: start; padding-top: 27px; border-top: 1px solid var(--ink); }
@@ -157,8 +145,6 @@ a:focus-visible { outline: 2px solid var(--coral); outline-offset: 5px; }
 .footer-inner a:hover { color: var(--coral); }
 
 @media (max-width: 1000px) {
-  .film-stage { grid-template-columns: 1fr; }
-  .film-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .header-status { display: none; }
   .hero-inner { grid-template-columns: 1fr; gap: 52px; padding-top: 175px; }
   .hero h1 { white-space: normal; }
@@ -174,7 +160,6 @@ a:focus-visible { outline: 2px solid var(--coral); outline-offset: 5px; }
 }
 @media (max-width: 700px) {
   .container { width: min(100% - 36px, 520px); }
-  .film-list { grid-template-columns: 1fr; }
   .film-meta { flex-direction: column; align-items: start; }
   .film-note { text-align: left; }
   .header-inner { min-height: 73px; }

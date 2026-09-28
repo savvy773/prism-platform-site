@@ -9,8 +9,7 @@ PRISM(Workspace + ERP 사내 플랫폼)의 공개 소개 사이트와, 대본만
 
 | 영상 | 길이 | 내용 |
 | --- | --- | --- |
-| `prism-tour-ko` PRISM 기능 투어 | 2:46 | 문서 허브부터 경영 보고까지, 실제 화면(예시 데이터)과 함께 |
-| `prism-intro-ko` 3분 만에 보는 PRISM | 3:33 | 흩어진 업무가 하나로 모이는 이야기 |
+| `prism-intro-ko` 3분 만에 보는 PRISM | 3:33 | 흩어진 업무가 하나로 모이는 이야기, 실제 화면(예시 데이터) 포함 |
 
 2D 일러스트, 프리즘 가이드·김 대리 캐릭터, Gemini TTS 한국어 내레이션, 효과음, 자막, YouTube 챕터가 들어갑니다.
 
@@ -42,7 +41,7 @@ apps/video/
 ## 문서
 
 - [영상 작업 설명서](docs/VIDEO_WORKFLOW.md): 대본 작성, TTS, 효과음·스크린샷, 앞으로의 방향
-- [Git 동기화](docs/GIT_SYNC.md): 집 ↔ 회사 작업 순서
+- [Git 동기화](docs/GIT_SYNC.md): 연속성
 - [구조](docs/ARCHITECTURE.md) · [결정 기록](docs/decisions.md) · [에이전트 지침](AGENTS.md)
 
 일러스트 화면은 이해를 돕기 위한 예시이고, 실제 화면은 예시 데이터로 촬영한 것만 씁니다.

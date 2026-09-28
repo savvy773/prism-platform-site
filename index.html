@@ -51,76 +51,41 @@
 
       <section class="section film" id="film" aria-labelledby="film-title">
         <div class="container film-intro">
-          <div><p class="eyebrow">01 / PRISM FILMS</p><h2 id="film-title">영상으로 만나는 PRISM.</h2></div>
-          <p>프리즘 가이드와 김 대리가 PRISM 구석구석을 안내합니다. 한국어 내레이션과 자막, 챕터가 들어 있어요. 보고 싶은 장면을 눌러 바로 이동해 보세요.</p>
+          <div><p class="eyebrow">01 / INTRODUCTION FILM</p><h2 id="film-title">3분 만에 보는 PRISM.</h2></div>
+          <p>프리즘 가이드와 김 대리의 하루를 따라 Workspace와 ERP가 하나로 이어지는 모습을 살펴보세요. 실제 화면과 한국어 내레이션, 자막이 들어 있어요. 챕터를 눌러 원하는 장면으로 바로 이동할 수 있습니다.</p>
         </div>
-        <div class="container film-stage">
+        <div class="container">
           <div class="film-player">
             <div class="film-frame">
-              <video id="film-video" controls playsinline preload="metadata" poster="./media/prism-tour-ko.png" aria-label="PRISM 기능 투어 영상">
-                <source src="./media/prism-tour-ko.mp4" type="video/mp4" />
-                <track kind="captions" srclang="ko" label="한국어" src="./media/prism-tour-ko.vtt" />
+              <video id="film-video" controls playsinline preload="metadata" poster="./media/prism-intro-ko.png" aria-label="3분 만에 보는 PRISM 영상">
+                <source src="./media/prism-intro-ko.mp4" type="video/mp4" />
+                <track kind="captions" srclang="ko" label="한국어" src="./media/prism-intro-ko.vtt" />
                 브라우저가 MP4 영상을 지원하지 않습니다.
               </video>
             </div>
             <div class="film-meta">
               <div>
-                <p class="film-kicker" id="film-kicker">NEW · 2:45</p>
-                <h3 id="film-name">PRISM 기능 투어</h3>
+                <p class="film-kicker">INTRO · 3:33</p>
+                <h3>3분 만에 보는 PRISM</h3>
               </div>
               <p class="film-note">실제 화면은 예시 데이터로 촬영했고, 일러스트 화면은 이해를 돕기 위한 예시입니다.</p>
             </div>
-            <div class="film-chapters" id="film-chapters" aria-label="챕터"></div>
+            <div class="film-chapters" id="film-chapters" aria-label="챕터" data-chapters="0:00 인트로|0:11 문제|0:40 PRISM 소개|1:00 Workspace|1:36 ERP|2:01 연결|2:13 무엇이 좋아질까|2:46 PRISM과 함께하는 하루|3:13 정리"></div>
           </div>
-          <ul class="film-list" aria-label="영상 목록">
-            <li>
-              <button class="film-card is-active" type="button" aria-pressed="true"
-                data-src="./media/prism-tour-ko.mp4" data-poster="./media/prism-tour-ko.png" data-track="./media/prism-tour-ko.vtt"
-                data-title="PRISM 기능 투어" data-kicker="NEW · 2:45"
-                data-chapters="0:00 인트로|0:21 WEB 워크스페이스|1:12 ERP|1:52 경영 보고|2:03 공통 기반|2:13 달라지는 점|2:25 앞으로">
-                <span class="film-thumb"><img src="./media/prism-tour-ko.png" alt="" loading="lazy" /><span class="film-time">2:45</span></span>
-                <span class="film-card-copy"><strong>PRISM 기능 투어</strong><span>문서 허브부터 경영 보고까지, 실제 화면과 함께 둘러보기</span></span>
-              </button>
-            </li>
-            <li>
-              <button class="film-card" type="button" aria-pressed="false"
-                data-src="./media/prism-intro-ko.mp4" data-poster="./media/prism-intro-ko.png" data-track="./media/prism-intro-ko.vtt"
-                data-title="3분 만에 보는 PRISM" data-kicker="INTRO · 3:33"
-                data-chapters="0:00 인트로|0:11 문제|0:40 PRISM 소개|1:00 Workspace|1:36 ERP|2:01 연결|2:13 무엇이 좋아질까|2:46 PRISM과 함께하는 하루|3:13 정리">
-                <span class="film-thumb"><img src="./media/prism-intro-ko.png" alt="" loading="lazy" /><span class="film-time">3:33</span></span>
-                <span class="film-card-copy"><strong>3분 만에 보는 PRISM</strong><span>흩어진 업무가 하나로 모이는 이야기</span></span>
-              </button>
-            </li>
-          </ul>
         </div>
         <script>
           (() => {
             const video = document.getElementById("film-video");
             const chapters = document.getElementById("film-chapters");
-            const cards = [...document.querySelectorAll(".film-card")];
             const seconds = (stamp) => stamp.split(":").reduce((sum, part) => sum * 60 + Number(part), 0);
-            const renderChapters = (list) => {
-              chapters.replaceChildren(...list.split("|").map((entry) => {
-                const [stamp, ...name] = entry.split(" ");
-                const button = document.createElement("button");
-                button.type = "button";
-                button.innerHTML = `<span>${stamp}</span>${name.join(" ")}`;
-                button.addEventListener("click", () => { video.currentTime = seconds(stamp); video.play(); });
-                return button;
-              }));
-            };
-            cards.forEach((card) => card.addEventListener("click", () => {
-              cards.forEach((other) => { other.classList.toggle("is-active", other === card); other.setAttribute("aria-pressed", String(other === card)); });
-              video.poster = card.dataset.poster;
-              video.querySelector("source").src = card.dataset.src;
-              video.querySelector("track").src = card.dataset.track;
-              video.setAttribute("aria-label", `${card.dataset.title} 영상`);
-              video.load();
-              document.getElementById("film-name").textContent = card.dataset.title;
-              document.getElementById("film-kicker").textContent = card.dataset.kicker;
-              renderChapters(card.dataset.chapters);
+            chapters.replaceChildren(...chapters.dataset.chapters.split("|").map((entry) => {
+              const [stamp, ...name] = entry.split(" ");
+              const button = document.createElement("button");
+              button.type = "button";
+              button.innerHTML = `<span>${stamp}</span>${name.join(" ")}`;
+              button.addEventListener("click", () => { video.currentTime = seconds(stamp); video.play(); });
+              return button;
             }));
-            renderChapters(cards[0].dataset.chapters);
           })();
         </script>
       </section>
