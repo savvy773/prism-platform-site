@@ -16,7 +16,7 @@ PRISM(Workspace + ERP 사내 플랫폼)의 공개 소개 사이트와, 대본만
 ## 빠른 시작
 
 ```bash
-cd apps/video && pnpm install && cp .env.example .env   # .env에 GEMINI_API_KEY 입력
+cd apps/video && pnpm install && cp .env.example .env   # 본인 키를 .env에만 입력 (Git 제외, 커밋 금지)
 cd ../..
 just video new my-video        # apps/video/projects/my-video/script.ts 생성
 just video make my-video       # 음성 → MP4·자막·챕터·썸네일
@@ -45,3 +45,7 @@ apps/video/
 - [구조](docs/ARCHITECTURE.md) · [결정 기록](docs/decisions.md) · [에이전트 지침](AGENTS.md)
 
 일러스트 화면은 이해를 돕기 위한 예시이고, 실제 화면은 예시 데이터로 촬영한 것만 씁니다.
+
+## 문의
+
+개발 문의: [juns@prismlight.co.kr](mailto:juns@prismlight.co.kr)
