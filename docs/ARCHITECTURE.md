@@ -3,20 +3,16 @@
 공개 소개 페이지와 대본 기반 영상 팩토리로 구성됩니다. WEB, ERP, Auth 본체의 코드나 실제 업무 데이터는 포함하지 않습니다.
 
 ```mermaid
-flowchart LR
-  subgraph Page[GitHub Pages 정적 사이트]
-    HTML[index.html] --> Media[media 게시용 MP4]
-  end
-  subgraph Factory[apps/video 영상 팩토리]
-    Script[projects/ID/script.ts] --> CLI[scripts/video.mjs]
-    CLI -->|Gemini TTS| Audio[audio/*.mp3 + manifest.json]
-    Audio --> Render[Remotion 컴포지션]
-    Script --> Render
-    Kit[src/illustrated 2D 키트] --> Render
-    Render --> Output[output/ MP4·SRT·설명·썸네일]
-  end
+flowchart TB
+  Script["projects/ID/script.ts"] --> CLI["scripts/video.mjs"]
+  CLI -->|Gemini TTS| Audio["audio/*.mp3<br/>manifest.json"]
+  Audio --> Render["Remotion 컴포지션"]
+  Script --> Render
+  Kit["src/illustrated<br/>2D 키트"] --> Render
+  Render --> Output["output/<br/>MP4 · SRT · 설명 · 썸네일"]
   Output -->|just video upload| YouTube
-  Output -->|just video site| Media
+  Output -->|just video site| Media["media/<br/>게시용 MP4"]
+  Media --> HTML["index.html<br/>GitHub Pages"]
 ```
 
 - `src/data/registry.ts`: `projects/*/script.ts`를 자동으로 찾아 컴포지션으로 등록

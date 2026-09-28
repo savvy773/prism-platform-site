@@ -16,36 +16,42 @@ PRISM(Workspace + ERP 사내 플랫폼)의 공개 소개 사이트와, 대본만
 ## 빠른 시작
 
 ```bash
-cd apps/video && pnpm install && cp .env.example .env   # 본인 키를 .env에만 입력 (Git 제외, 커밋 금지)
+cd apps/video
+pnpm install
+cp .env.example .env
 cd ../..
-just video new my-video        # apps/video/projects/my-video/script.ts 생성
-just video make my-video       # 음성 → MP4·자막·챕터·썸네일
-just video upload my-video     # YouTube 업로드 (기본 비공개)
-just video site my-video       # 사이트 media/로 내보내기
 ```
+
+`.env`에 본인 `GEMINI_API_KEY`를 입력합니다. 이 파일은 Git에서 제외되므로 커밋하지 마세요.
+
+| 명령 | 하는 일 |
+| --- | --- |
+| `just video new my-video` | `projects/my-video/script.ts` 생성 |
+| `just video make my-video` | 음성 → MP4·자막·챕터·썸네일 |
+| `just video upload my-video` | YouTube 업로드 (기본 비공개) |
+| `just video site my-video` | 사이트 `media/`로 내보내기 |
 
 `just video`만 치면 미리보기 Studio가 열리고, `just video list`로 영상 목록과 상태를 봅니다. 여러 개는 `just video make a b c` 또는 `--all`.
 
 ## 구조
 
 ```mermaid
-flowchart LR
-  subgraph site["소개 페이지 (GitHub Pages)"]
-    page["index.html · styles.css"]
-    media["media/<br/>MP4 · 포스터 · 자막"]
-  end
-  subgraph factory["apps/video · 영상 팩토리"]
-    script["projects/&lt;영상 ID&gt;/script.ts<br/>대본 · assets · 음성"]
-    cli["scripts/video.mjs<br/>팩토리 CLI"]
-    kit["src/illustrated/<br/>캐릭터 · 레이아웃 · 효과음 · 폰트"]
-    tpl["templates/script.ts"]
-  end
-  tpl -- "just video new" --> script
+flowchart TB
+  tpl["templates/script.ts"]
+  script["projects/&lt;영상 ID&gt;/script.ts<br/>대본 · assets · 음성"]
+  kit["src/illustrated/<br/>캐릭터 · 레이아웃 · 효과음"]
+  cli["scripts/video.mjs<br/>팩토리 CLI"]
+  out["output/<br/>MP4 · 자막 · 썸네일 (Git 제외)"]
+  yt["YouTube<br/>(기본 비공개)"]
+  media["media/<br/>게시용 MP4 · 포스터 · 자막"]
+  page["index.html · styles.css<br/>소개 페이지"]
+
+  tpl -->|just video new| script
   script --> cli
   kit --> cli
-  cli -- "just video make" --> out["output/ (Git 제외)"]
-  out -- "just video site" --> media
-  out -- "just video upload" --> yt["YouTube (기본 비공개)"]
+  cli -->|just video make| out
+  out -->|upload| yt
+  out -->|site| media
   media --> page
 ```
 
