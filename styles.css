@@ -271,7 +271,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-strong);
   .closing { padding: 40px 0 44px; }
   .footer-inner { flex-wrap: wrap; gap: 8px 20px; align-content: center; padding: 22px 0; }
   .footer-inner > span:nth-child(2) { flex-basis: calc(100% - 100px); }
-  .footer-inner a { margin-left: auto; }
+  .footer-inner a:last-child { margin-left: auto; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
