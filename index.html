@@ -22,8 +22,8 @@
           <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="currentColor" /><path d="M10 23V9h7a4.5 4.5 0 0 1 0 9h-7" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round" /><circle cx="23.5" cy="23" r="2.5" fill="#d97855" /></svg>
           <span>PRISM</span>
         </a>
-        <nav class="desktop-nav" aria-label="주 메뉴"><a href="#platform">플랫폼</a><a href="#workspace">Workspace</a><a href="#erp">ERP</a><a href="#connection">연결 구조</a><a href="#reporting">리포트</a><a href="#film">영상</a></nav>
-        <details class="mobile-nav"><summary>메뉴</summary><nav aria-label="모바일 메뉴"><a href="#platform">플랫폼</a><a href="#workspace">Workspace</a><a href="#erp">ERP</a><a href="#connection">연결 구조</a><a href="#reporting">리포트</a><a href="#film">영상</a></nav></details>
+        <nav class="desktop-nav" aria-label="주 메뉴"><a href="#film">영상</a><a href="#platform">플랫폼</a><a href="#workspace">Workspace</a><a href="#erp">ERP</a><a href="#connection">연결 구조</a><a href="#reporting">리포트</a></nav>
+        <details class="mobile-nav"><summary>메뉴</summary><nav aria-label="모바일 메뉴"><a href="#film">영상</a><a href="#platform">플랫폼</a><a href="#workspace">Workspace</a><a href="#erp">ERP</a><a href="#connection">연결 구조</a><a href="#reporting">리포트</a></nav></details>
         <span class="header-status"><span aria-hidden="true"></span> IN DEVELOPMENT</span>
       </div>
     </header>
@@ -49,77 +49,9 @@
         <div class="container hero-foot"><span>PEOPLE → WORK → DATA → DECISIONS</span><span>설계와 개발이 진행 중입니다.</span><span>SCROLL TO EXPLORE ↓</span></div>
       </section>
 
-      <section class="section platform" id="platform" aria-labelledby="platform-title">
-        <div class="container section-intro">
-          <p class="eyebrow eyebrow-dark">01 / PLATFORM</p>
-          <div class="intro-grid"><h2 id="platform-title">두 개의 영역.<br />하나의 업무 맥락.</h2><p>Workspace는 사람과 일이 만나는 공간이고, ERP는 운영의 흐름을 기록합니다. 필요한 정보가 다음 업무로 이어지도록 연결합니다.</p></div>
-        </div>
-        <div class="container service-grid">
-          <article class="service-panel web-panel">
-            <div class="service-top"><span>01 / WORKSPACE</span><span aria-hidden="true">↗</span></div>
-            <h3>Workspace</h3>
-            <p>문서, 주간보고, 프로젝트, 팀 일정을 한곳에서 보고 함께 움직입니다.</p>
-            <div class="service-tags"><span>문서</span><span>주간보고</span><span>프로젝트</span><span>팀 일정</span></div>
-            <a class="service-link" href="#workspace">Workspace 자세히 보기 <span aria-hidden="true">↗</span></a>
-          </article>
-          <article class="service-panel erp-panel">
-            <div class="service-top"><span>02 / OPERATIONS</span><span aria-hidden="true">↗</span></div>
-            <h3>ERP</h3>
-            <p>매출부터 인사와 리포트까지, 운영 데이터를 업무 흐름에 맞게 정리합니다.</p>
-            <div class="service-tags"><span>매출·구매</span><span>재고·생산</span><span>인사·보고</span></div>
-            <a class="service-link" href="#erp">ERP 자세히 보기 <span aria-hidden="true">↗</span></a>
-          </article>
-        </div>
-      </section>
-
-      <section class="section detail-section workspace-section" id="workspace" aria-labelledby="workspace-title">
-        <div class="container detail-grid">
-          <div class="detail-copy">
-            <p class="eyebrow eyebrow-dark">02 / WORKSPACE</p>
-            <h2 id="workspace-title">일의 맥락이<br />머무는 곳.</h2>
-            <p class="detail-lead">찾기 쉬운 문서, 공유되는 주간보고, 보이는 프로젝트와 일정. 팀이 같은 맥락에서 일하도록 돕습니다.</p>
-            <div class="feature-list">
-              <div><span>01</span><strong>Documents</strong><p>기준 문서와 자료를 한곳에서 찾습니다.</p></div>
-              <div><span>02</span><strong>Weekly Reports</strong><p>이번 주의 진행 상황과 다음 단계를 공유합니다.</p></div>
-              <div><span>03</span><strong>Projects</strong><p>담당자와 할 일을 흐름에 따라 봅니다.</p></div>
-              <div><span>04</span><strong>Team Schedule</strong><p>일정과 협업 시간을 함께 맞춥니다.</p></div>
-            </div>
-          </div>
-          <figure class="detail-visual"><img src="./assets/web-preview.svg" alt="PRISM Workspace의 문서, 일정, 프로젝트 화면 구성 예시" width="1200" height="720" loading="lazy" /><figcaption>WORKSPACE / 화면 구성 예시 · 실데이터 없음</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="section detail-section erp-section" id="erp" aria-labelledby="erp-title">
-        <div class="container detail-grid detail-grid-reverse">
-          <div class="detail-copy">
-            <p class="eyebrow eyebrow-dark">03 / ERP</p>
-            <h2 id="erp-title">운영의 숫자를<br />업무의 언어로.</h2>
-            <p class="detail-lead">매출·구매·재고·생산·인사·보고를 분리된 표 대신 이어지는 운영 흐름으로 봅니다.</p>
-            <div class="feature-list">
-              <div><span>01</span><strong>Sales &amp; Purchasing</strong><p>거래 흐름을 한눈에 파악합니다.</p></div>
-              <div><span>02</span><strong>Inventory &amp; Production</strong><p>재고와 생산 상태를 함께 봅니다.</p></div>
-              <div><span>03</span><strong>HR &amp; Reports</strong><p>사람과 운영 지표를 판단에 연결합니다.</p></div>
-            </div>
-          </div>
-          <figure class="detail-visual"><img src="./assets/erp-preview.svg" alt="PRISM ERP의 매출, 구매, 재고, 생산 화면 구성 예시" width="1200" height="720" loading="lazy" /><figcaption>ERP / 화면 구성 예시 · 실데이터 없음</figcaption></figure>
-        </div>
-      </section>
-
-      <section class="section connection-section" id="connection" aria-labelledby="connection-title">
-        <div class="container section-intro"><p class="eyebrow">04 / CONNECTED FLOW</p><div class="intro-grid"><h2 id="connection-title">흩어진 정보를<br />이어지는 흐름으로.</h2><p>사람이 일을 만들고, 업무가 데이터를 남기고, 데이터가 더 나은 판단을 돕습니다. PRISM은 그 사이의 맥락을 끊지 않습니다.</p></div></div>
-        <div class="container flow-track" role="img" aria-label="사람에서 Workspace, ERP, 공유 데이터, 리포트와 의사결정으로 이어지는 흐름"><div><small>01</small><strong>People</strong><span>팀과 역할</span></div><div><small>02</small><strong>Workspace</strong><span>협업과 기록</span></div><div><small>03</small><strong>ERP</strong><span>운영과 실행</span></div><div><small>04</small><strong>Shared data</strong><span>연결된 정보</span></div><div><small>05</small><strong>Decisions</strong><span>보고와 판단</span></div></div>
-      </section>
-
-      <section class="section reporting-section" id="reporting" aria-labelledby="reporting-title">
-        <div class="container reporting-grid">
-          <div><p class="eyebrow eyebrow-dark">05 / VISIBILITY</p><h2 id="reporting-title">더 잘 보이면,<br />덜 추측합니다.</h2><p class="detail-lead">주간 현황과 프로젝트 진행, 운영 지표가 같은 화면에 모이면 회의는 짧아지고 다음 행동은 선명해집니다.</p><div class="reporting-tags"><span>Weekly status</span><span>Project progress</span><span>Operations</span></div></div>
-          <div class="report-visual" aria-label="리포트 화면 구성 예시"><div class="report-top"><span>PRISM / SHARED OVERVIEW</span><span>● LIVE VIEW</span></div><div class="report-chart"><span style="height: 38%"></span><span style="height: 57%"></span><span style="height: 48%"></span><span style="height: 68%"></span><span style="height: 59%"></span><span style="height: 81%"></span><span style="height: 73%"></span><span style="height: 92%"></span></div><div class="report-rows"><div><span>Weekly status</span><b>On track</b></div><div><span>Project progress</span><b>In view</b></div></div><p>화면 구성 예시 · 실데이터 없음</p></div>
-        </div>
-      </section>
-
       <section class="section film" id="film" aria-labelledby="film-title">
         <div class="container film-intro">
-          <div><p class="eyebrow">06 / PRISM FILMS</p><h2 id="film-title">영상으로 만나는 PRISM.</h2></div>
+          <div><p class="eyebrow">01 / PRISM FILMS</p><h2 id="film-title">영상으로 만나는 PRISM.</h2></div>
           <p>프리즘 가이드와 김 대리가 PRISM 구석구석을 안내합니다. 한국어 내레이션과 자막, 챕터가 들어 있어요. 보고 싶은 장면을 눌러 바로 이동해 보세요.</p>
         </div>
         <div class="container film-stage">
@@ -191,6 +123,74 @@
             renderChapters(cards[0].dataset.chapters);
           })();
         </script>
+      </section>
+
+      <section class="section platform" id="platform" aria-labelledby="platform-title">
+        <div class="container section-intro">
+          <p class="eyebrow eyebrow-dark">02 / PLATFORM</p>
+          <div class="intro-grid"><h2 id="platform-title">두 개의 영역.<br />하나의 업무 맥락.</h2><p>Workspace는 사람과 일이 만나는 공간이고, ERP는 운영의 흐름을 기록합니다. 필요한 정보가 다음 업무로 이어지도록 연결합니다.</p></div>
+        </div>
+        <div class="container service-grid">
+          <article class="service-panel web-panel">
+            <div class="service-top"><span>01 / WORKSPACE</span><span aria-hidden="true">↗</span></div>
+            <h3>Workspace</h3>
+            <p>문서, 주간보고, 프로젝트, 팀 일정을 한곳에서 보고 함께 움직입니다.</p>
+            <div class="service-tags"><span>문서</span><span>주간보고</span><span>프로젝트</span><span>팀 일정</span></div>
+            <a class="service-link" href="#workspace">Workspace 자세히 보기 <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="service-panel erp-panel">
+            <div class="service-top"><span>02 / OPERATIONS</span><span aria-hidden="true">↗</span></div>
+            <h3>ERP</h3>
+            <p>매출부터 인사와 리포트까지, 운영 데이터를 업무 흐름에 맞게 정리합니다.</p>
+            <div class="service-tags"><span>매출·구매</span><span>재고·생산</span><span>인사·보고</span></div>
+            <a class="service-link" href="#erp">ERP 자세히 보기 <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section detail-section workspace-section" id="workspace" aria-labelledby="workspace-title">
+        <div class="container detail-grid">
+          <div class="detail-copy">
+            <p class="eyebrow eyebrow-dark">03 / WORKSPACE</p>
+            <h2 id="workspace-title">일의 맥락이<br />머무는 곳.</h2>
+            <p class="detail-lead">찾기 쉬운 문서, 공유되는 주간보고, 보이는 프로젝트와 일정. 팀이 같은 맥락에서 일하도록 돕습니다.</p>
+            <div class="feature-list">
+              <div><span>01</span><strong>Documents</strong><p>기준 문서와 자료를 한곳에서 찾습니다.</p></div>
+              <div><span>02</span><strong>Weekly Reports</strong><p>이번 주의 진행 상황과 다음 단계를 공유합니다.</p></div>
+              <div><span>03</span><strong>Projects</strong><p>담당자와 할 일을 흐름에 따라 봅니다.</p></div>
+              <div><span>04</span><strong>Team Schedule</strong><p>일정과 협업 시간을 함께 맞춥니다.</p></div>
+            </div>
+          </div>
+          <figure class="detail-visual"><img src="./assets/web-preview.svg" alt="PRISM Workspace의 문서, 일정, 프로젝트 화면 구성 예시" width="1200" height="720" loading="lazy" /><figcaption>WORKSPACE / 화면 구성 예시 · 실데이터 없음</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section detail-section erp-section" id="erp" aria-labelledby="erp-title">
+        <div class="container detail-grid detail-grid-reverse">
+          <div class="detail-copy">
+            <p class="eyebrow eyebrow-dark">04 / ERP</p>
+            <h2 id="erp-title">운영의 숫자를<br />업무의 언어로.</h2>
+            <p class="detail-lead">매출·구매·재고·생산·인사·보고를 분리된 표 대신 이어지는 운영 흐름으로 봅니다.</p>
+            <div class="feature-list">
+              <div><span>01</span><strong>Sales &amp; Purchasing</strong><p>거래 흐름을 한눈에 파악합니다.</p></div>
+              <div><span>02</span><strong>Inventory &amp; Production</strong><p>재고와 생산 상태를 함께 봅니다.</p></div>
+              <div><span>03</span><strong>HR &amp; Reports</strong><p>사람과 운영 지표를 판단에 연결합니다.</p></div>
+            </div>
+          </div>
+          <figure class="detail-visual"><img src="./assets/erp-preview.svg" alt="PRISM ERP의 매출, 구매, 재고, 생산 화면 구성 예시" width="1200" height="720" loading="lazy" /><figcaption>ERP / 화면 구성 예시 · 실데이터 없음</figcaption></figure>
+        </div>
+      </section>
+
+      <section class="section connection-section" id="connection" aria-labelledby="connection-title">
+        <div class="container section-intro"><p class="eyebrow">05 / CONNECTED FLOW</p><div class="intro-grid"><h2 id="connection-title">흩어진 정보를<br />이어지는 흐름으로.</h2><p>사람이 일을 만들고, 업무가 데이터를 남기고, 데이터가 더 나은 판단을 돕습니다. PRISM은 그 사이의 맥락을 끊지 않습니다.</p></div></div>
+        <div class="container flow-track" role="img" aria-label="사람에서 Workspace, ERP, 공유 데이터, 리포트와 의사결정으로 이어지는 흐름"><div><small>01</small><strong>People</strong><span>팀과 역할</span></div><div><small>02</small><strong>Workspace</strong><span>협업과 기록</span></div><div><small>03</small><strong>ERP</strong><span>운영과 실행</span></div><div><small>04</small><strong>Shared data</strong><span>연결된 정보</span></div><div><small>05</small><strong>Decisions</strong><span>보고와 판단</span></div></div>
+      </section>
+
+      <section class="section reporting-section" id="reporting" aria-labelledby="reporting-title">
+        <div class="container reporting-grid">
+          <div><p class="eyebrow eyebrow-dark">06 / VISIBILITY</p><h2 id="reporting-title">더 잘 보이면,<br />덜 추측합니다.</h2><p class="detail-lead">주간 현황과 프로젝트 진행, 운영 지표가 같은 화면에 모이면 회의는 짧아지고 다음 행동은 선명해집니다.</p><div class="reporting-tags"><span>Weekly status</span><span>Project progress</span><span>Operations</span></div></div>
+          <div class="report-visual" aria-label="리포트 화면 구성 예시"><div class="report-top"><span>PRISM / SHARED OVERVIEW</span><span>● LIVE VIEW</span></div><div class="report-chart"><span style="height: 38%"></span><span style="height: 57%"></span><span style="height: 48%"></span><span style="height: 68%"></span><span style="height: 59%"></span><span style="height: 81%"></span><span style="height: 73%"></span><span style="height: 92%"></span></div><div class="report-rows"><div><span>Weekly status</span><b>On track</b></div><div><span>Project progress</span><b>In view</b></div></div><p>화면 구성 예시 · 실데이터 없음</p></div>
+        </div>
       </section>
 
       <section class="closing" aria-labelledby="closing-title"><div class="container closing-inner"><p class="eyebrow eyebrow-dark">07 / DIRECTION</p><h2 id="closing-title">Less chaos.<br />More clarity.</h2><p>PRISM은 현재 개발 중인 프로젝트입니다. Workspace와 ERP를 실제 업무 흐름에 맞춰 단계적으로 완성합니다.</p></div></section>
