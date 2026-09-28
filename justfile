@@ -37,3 +37,25 @@ com:
 # Commit pending changes, then push the current branch.
 push: com
     @git push
+
+# Pull with rebase (normal start of a work session).
+pull:
+    @git pull --rebase
+
+# Make the local branch match origin exactly; local changes are kept in a stash and a backup branch.
+pull-force:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    branch=$(git branch --show-current)
+    git fetch origin
+    if [[ -n "$(git status --porcelain)" ]]; then
+        git stash push -u -m "pull-force $(date +%F_%H%M%S)"
+        echo "Uncommitted changes saved: git stash list"
+    fi
+    if [[ -n "$(git rev-list "origin/$branch..HEAD")" ]]; then
+        backup="backup/$branch-$(date +%Y%m%d-%H%M%S)"
+        git branch "$backup"
+        echo "Local-only commits saved on $backup"
+    fi
+    git reset --hard "origin/$branch"
+    git log --oneline -1

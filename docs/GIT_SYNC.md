@@ -41,7 +41,7 @@ git push
 
 ```bash
 cd ~/code/prism-page
-git pull --rebase
+just pull                                   # = git pull --rebase
 cd apps/video && pnpm install && cd ../..   # 패키지가 바뀌었을 때만 필요, 해도 무방
 just video list                             # 영상 목록과 렌더 상태 확인
 just video render <ID>                      # 영상 파일이 필요하면 다시 렌더
@@ -65,11 +65,10 @@ git push
 
 ## 이력을 다시 쓴 뒤 (2026-09-28)
 
-커밋 메시지의 `Co-Authored-By: Claude` 줄을 지우려고 `main` 이력을 다시 쓰고 강제 푸시했습니다. 그 전에 받아 둔 PC에서는 한 번만 아래를 실행합니다. 올리지 않은 작업이 있으면 먼저 따로 백업하세요.
+커밋 메시지의 `Co-Authored-By: Claude` 줄을 지우려고 `main` 이력을 다시 쓰고 강제 푸시했습니다. 그 전에 받아 둔 PC에서는 한 번만 아래를 실행합니다. `just pull-force`는 커밋 안 한 변경을 stash에, 올리지 않은 커밋을 `backup/<브랜치>-<시각>` 브랜치에 남긴 뒤 원격과 똑같이 맞춥니다.
 
 ```bash
-git fetch
-git reset --hard origin/main
+just pull-force
 ```
 
 ## 자주 하는 실수
