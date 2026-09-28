@@ -28,14 +28,25 @@ just video site my-video       # 사이트 media/로 내보내기
 
 ## 구조
 
-```text
-index.html, styles.css         소개 페이지
-media/                         사이트에 게시하는 MP4·포스터·자막
-apps/video/
-  projects/<영상 ID>/          영상 하나 = 폴더 하나 (대본, assets, 음성 / output은 Git 제외)
-  src/illustrated/             공용 2D 키트: 캐릭터, 레이아웃, 효과음, 폰트
-  scripts/video.mjs            팩토리 CLI
-  templates/script.ts          새 대본 템플릿
+```mermaid
+flowchart LR
+  subgraph site["소개 페이지 (GitHub Pages)"]
+    page["index.html · styles.css"]
+    media["media/<br/>MP4 · 포스터 · 자막"]
+  end
+  subgraph factory["apps/video · 영상 팩토리"]
+    script["projects/&lt;영상 ID&gt;/script.ts<br/>대본 · assets · 음성"]
+    cli["scripts/video.mjs<br/>팩토리 CLI"]
+    kit["src/illustrated/<br/>캐릭터 · 레이아웃 · 효과음 · 폰트"]
+    tpl["templates/script.ts"]
+  end
+  tpl -- "just video new" --> script
+  script --> cli
+  kit --> cli
+  cli -- "just video make" --> out["output/ (Git 제외)"]
+  out -- "just video site" --> media
+  out -- "just video upload" --> yt["YouTube (기본 비공개)"]
+  media --> page
 ```
 
 ## 문서
