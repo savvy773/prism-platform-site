@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="PRISM WEB 화면 구성 예시">
+  <rect width="1200" height="720" fill="#14191d"/>
+  <rect x="22" y="22" width="1156" height="676" rx="12" fill="#f7f7f5"/>
+  <rect x="22" y="22" width="1156" height="64" rx="12" fill="#22282c"/>
+  <rect x="22" y="70" width="1156" height="16" fill="#22282c"/>
+  <rect x="44" y="41" width="27" height="27" rx="6" fill="#d97855"/>
+  <text x="84" y="61" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">PRISM WEB</text>
+  <text x="368" y="61" fill="#cbd0d2" font-family="Arial,sans-serif" font-size="14">홈</text>
+  <text x="433" y="61" fill="#cbd0d2" font-family="Arial,sans-serif" font-size="14">문서</text>
+  <text x="511" y="61" fill="#cbd0d2" font-family="Arial,sans-serif" font-size="14">주간업무</text>
+  <text x="623" y="61" fill="#cbd0d2" font-family="Arial,sans-serif" font-size="14">프로젝트</text>
+  <circle cx="1129" cy="54" r="17" fill="#464e52"/>
+  <rect x="22" y="86" width="201" height="612" fill="#f0f1ee"/>
+  <text x="48" y="132" fill="#869096" font-family="Arial,sans-serif" font-size="12" font-weight="700">WORKSPACE</text>
+  <rect x="39" y="155" width="168" height="42" rx="7" fill="#f6dfd7"/>
+  <circle cx="57" cy="176" r="5" fill="#c66b4d"/>
+  <text x="74" y="182" fill="#8f4934" font-family="Arial,sans-serif" font-size="14" font-weight="700">대시보드</text>
+  <text x="74" y="234" fill="#5f686b" font-family="Arial,sans-serif" font-size="14">문서 허브</text>
+  <text x="74" y="280" fill="#5f686b" font-family="Arial,sans-serif" font-size="14">주간업무</text>
+  <text x="74" y="326" fill="#5f686b" font-family="Arial,sans-serif" font-size="14">일정</text>
+  <text x="74" y="372" fill="#5f686b" font-family="Arial,sans-serif" font-size="14">프로젝트</text>
+  <text x="262" y="137" fill="#22282c" font-family="Arial,sans-serif" font-size="27" font-weight="700">오늘의 업무</text>
+  <text x="262" y="163" fill="#7b8589" font-family="Arial,sans-serif" font-size="13">문서, 일정과 프로젝트를 한 곳에서 살펴봅니다.</text>
+  <rect x="1016" y="118" width="130" height="32" rx="6" fill="#c66b4d"/>
+  <text x="1040" y="139" fill="#fff" font-family="Arial,sans-serif" font-size="12" font-weight="700">새 문서 작성</text>
+  <rect x="262" y="196" width="270" height="115" rx="9" fill="#fff" stroke="#e0e4e1"/>
+  <rect x="549" y="196" width="270" height="115" rx="9" fill="#fff" stroke="#e0e4e1"/>
+  <rect x="836" y="196" width="310" height="115" rx="9" fill="#fff" stroke="#e0e4e1"/>
+  <text x="282" y="230" fill="#848d91" font-family="Arial,sans-serif" font-size="12">문서 허브</text>
+  <text x="282" y="266" fill="#272c30" font-family="Arial,sans-serif" font-size="22" font-weight="700">공유 문서</text>
+  <rect x="282" y="282" width="125" height="5" rx="2" fill="#d97855"/>
+  <text x="569" y="230" fill="#848d91" font-family="Arial,sans-serif" font-size="12">주간업무</text>
+  <text x="569" y="266" fill="#272c30" font-family="Arial,sans-serif" font-size="22" font-weight="700">이번 주</text>
+  <rect x="569" y="282" width="156" height="5" rx="2" fill="#d97855"/>
+  <text x="856" y="230" fill="#848d91" font-family="Arial,sans-serif" font-size="12">프로젝트</text>
+  <text x="856" y="266" fill="#272c30" font-family="Arial,sans-serif" font-size="22" font-weight="700">진행 흐름</text>
+  <rect x="856" y="282" width="192" height="5" rx="2" fill="#d97855"/>
+  <rect x="262" y="331" width="570" height="327" rx="9" fill="#fff" stroke="#e0e4e1"/>
+  <text x="286" y="368" fill="#272c30" font-family="Arial,sans-serif" font-size="17" font-weight="700">주간 일정</text>
+  <path d="M286 390H808 M286 439H808 M286 488H808 M286 537H808 M286 586H808 M286 635H808" stroke="#edf0ed"/>
+  <path d="M360 390V635 M449 390V635 M538 390V635 M627 390V635 M716 390V635" stroke="#edf0ed"/>
+  <rect x="376" y="451" width="137" height="26" rx="5" fill="#f3d9cf"/>
+  <rect x="549" y="501" width="130" height="26" rx="5" fill="#e1e9e6"/>
+  <rect x="287" y="550" width="127" height="26" rx="5" fill="#f3d9cf"/>
+  <rect x="851" y="331" width="295" height="327" rx="9" fill="#fff" stroke="#e0e4e1"/>
+  <text x="874" y="368" fill="#272c30" font-family="Arial,sans-serif" font-size="17" font-weight="700">최근 문서</text>
+  <rect x="874" y="394" width="231" height="1" fill="#e7ebe7"/>
+  <rect x="874" y="418" width="205" height="10" rx="5" fill="#cbd2d1"/>
+  <rect x="874" y="440" width="155" height="7" rx="3" fill="#e4e8e5"/>
+  <rect x="874" y="480" width="190" height="10" rx="5" fill="#cbd2d1"/>
+  <rect x="874" y="502" width="164" height="7" rx="3" fill="#e4e8e5"/>
+  <rect x="874" y="542" width="214" height="10" rx="5" fill="#cbd2d1"/>
+  <rect x="874" y="564" width="137" height="7" rx="3" fill="#e4e8e5"/>
+  <rect x="970" y="662" width="208" height="36" rx="8" fill="#22282c"/>
+  <text x="987" y="685" fill="#e9eeee" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">CONCEPT PREVIEW</text>
+</svg>

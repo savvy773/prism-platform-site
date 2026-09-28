@@ -1,0 +1,30 @@
+{
+  "name": "prism-video",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@12.6.0",
+  "scripts": {
+    "dev": "remotion studio src/index.ts",
+    "studio": "remotion studio src/index.ts",
+    "compositions": "remotion compositions src/index.ts",
+    "render": "remotion render src/index.ts PrismLandingIntro projects/prism-landing-intro/output/prism-landing-intro.mp4",
+    "render:site": "remotion render src/index.ts PrismLandingIntro ../../media/prism-landing-intro.mp4",
+    "still": "remotion still src/index.ts PrismLandingIntro projects/prism-landing-intro/output/prism-landing-still.png --frame=1500",
+    "tts": "node scripts/tts.mjs prism-landing-intro",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check ."
+  },
+  "dependencies": {
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.529",
+    "zod": "4.5.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.14",
+    "@remotion/cli": "4.0.529",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "typescript": "7.0.2"
+  }
+}

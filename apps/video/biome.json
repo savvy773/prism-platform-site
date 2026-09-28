@@ -1,0 +1,6 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.5.14/schema.json",
+  "formatter": { "indentStyle": "space", "indentWidth": 2 },
+  "javascript": { "formatter": { "quoteStyle": "double" } },
+  "files": { "includes": ["**", "!output", "!node_modules", "!pnpm-lock.yaml"] }
+}

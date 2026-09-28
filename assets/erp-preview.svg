@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="PRISM ERP 화면 구성 예시">
+  <rect width="1200" height="720" fill="#101a1b"/>
+  <rect x="22" y="22" width="1156" height="676" rx="12" fill="#f5f7f6"/>
+  <rect x="22" y="22" width="1156" height="64" rx="12" fill="#1d2a2b"/>
+  <rect x="22" y="70" width="1156" height="16" fill="#1d2a2b"/>
+  <rect x="44" y="41" width="27" height="27" rx="6" fill="#0f766e"/>
+  <text x="84" y="61" fill="#fff" font-family="Arial,sans-serif" font-size="20" font-weight="700">PRISM ERP</text>
+  <text x="381" y="61" fill="#cbd7d4" font-family="Arial,sans-serif" font-size="14">대시보드</text>
+  <text x="505" y="61" fill="#cbd7d4" font-family="Arial,sans-serif" font-size="14">ERP</text>
+  <text x="580" y="61" fill="#cbd7d4" font-family="Arial,sans-serif" font-size="14">HR</text>
+  <text x="643" y="61" fill="#cbd7d4" font-family="Arial,sans-serif" font-size="14">REPORT</text>
+  <circle cx="1129" cy="54" r="17" fill="#425153"/>
+  <rect x="22" y="86" width="201" height="612" fill="#eaf0ed"/>
+  <text x="48" y="132" fill="#7b8987" font-family="Arial,sans-serif" font-size="12" font-weight="700">OPERATIONS</text>
+  <rect x="39" y="155" width="168" height="42" rx="7" fill="#d1e9e4"/>
+  <circle cx="57" cy="176" r="5" fill="#0f766e"/>
+  <text x="74" y="182" fill="#0f655f" font-family="Arial,sans-serif" font-size="14" font-weight="700">운영 현황</text>
+  <text x="74" y="234" fill="#5f706e" font-family="Arial,sans-serif" font-size="14">매출</text>
+  <text x="74" y="280" fill="#5f706e" font-family="Arial,sans-serif" font-size="14">구매</text>
+  <text x="74" y="326" fill="#5f706e" font-family="Arial,sans-serif" font-size="14">재고</text>
+  <text x="74" y="372" fill="#5f706e" font-family="Arial,sans-serif" font-size="14">생산</text>
+  <text x="262" y="137" fill="#1e2b2a" font-family="Arial,sans-serif" font-size="27" font-weight="700">운영 현황</text>
+  <text x="262" y="163" fill="#798985" font-family="Arial,sans-serif" font-size="13">핵심 업무 정보를 목적에 맞게 살펴봅니다.</text>
+  <rect x="1024" y="118" width="122" height="32" rx="6" fill="#0f766e"/>
+  <text x="1057" y="139" fill="#fff" font-family="Arial,sans-serif" font-size="12" font-weight="700">보고 보기</text>
+  <rect x="262" y="196" width="270" height="115" rx="9" fill="#fff" stroke="#dce5e0"/>
+  <rect x="549" y="196" width="270" height="115" rx="9" fill="#fff" stroke="#dce5e0"/>
+  <rect x="836" y="196" width="310" height="115" rx="9" fill="#fff" stroke="#dce5e0"/>
+  <text x="282" y="230" fill="#83908d" font-family="Arial,sans-serif" font-size="12">매출</text>
+  <text x="282" y="266" fill="#27322f" font-family="Arial,sans-serif" font-size="22" font-weight="700">흐름 확인</text>
+  <rect x="282" y="282" width="125" height="5" rx="2" fill="#0f766e"/>
+  <text x="569" y="230" fill="#83908d" font-family="Arial,sans-serif" font-size="12">구매</text>
+  <text x="569" y="266" fill="#27322f" font-family="Arial,sans-serif" font-size="22" font-weight="700">발주 현황</text>
+  <rect x="569" y="282" width="156" height="5" rx="2" fill="#0f766e"/>
+  <text x="856" y="230" fill="#83908d" font-family="Arial,sans-serif" font-size="12">재고·생산</text>
+  <text x="856" y="266" fill="#27322f" font-family="Arial,sans-serif" font-size="22" font-weight="700">운영 지표</text>
+  <rect x="856" y="282" width="192" height="5" rx="2" fill="#0f766e"/>
+  <rect x="262" y="331" width="570" height="327" rx="9" fill="#fff" stroke="#dce5e0"/>
+  <text x="286" y="368" fill="#27322f" font-family="Arial,sans-serif" font-size="17" font-weight="700">업무 흐름</text>
+  <path d="M290 607H802 M290 548H802 M290 489H802 M290 430H802" stroke="#e8eeeb"/>
+  <path d="M311 577L384 542L464 550L543 481L625 502L705 436L791 454" fill="none" stroke="#0f766e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M311 604L384 576L464 585L543 544L625 558L705 521L791 536" fill="none" stroke="#9bbeb6" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="851" y="331" width="295" height="327" rx="9" fill="#fff" stroke="#dce5e0"/>
+  <text x="874" y="368" fill="#27322f" font-family="Arial,sans-serif" font-size="17" font-weight="700">업무 목록</text>
+  <rect x="874" y="396" width="247" height="39" rx="6" fill="#e7f3ef"/>
+  <rect x="887" y="412" width="138" height="7" rx="3" fill="#87aaa1"/>
+  <rect x="874" y="449" width="247" height="39" rx="6" fill="#f2f5f2"/>
+  <rect x="887" y="465" width="165" height="7" rx="3" fill="#bfcac3"/>
+  <rect x="874" y="502" width="247" height="39" rx="6" fill="#f2f5f2"/>
+  <rect x="887" y="518" width="124" height="7" rx="3" fill="#bfcac3"/>
+  <rect x="970" y="662" width="208" height="36" rx="8" fill="#1d2a2b"/>
+  <text x="987" y="685" fill="#e9eeee" font-family="Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="2">CONCEPT PREVIEW</text>
+</svg>

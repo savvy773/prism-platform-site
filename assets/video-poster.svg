@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-label="PRISM 소개 영상 포스터">
+  <rect width="1600" height="900" fill="#151e20"/>
+  <path d="M0 0H1600V900H0Z" fill="#1d292b"/>
+  <g stroke="#ffffff12" fill="none"><path d="M0 140H1600M0 300H1600M0 460H1600M0 620H1600M0 780H1600"/><path d="M160 0V900M400 0V900M640 0V900M880 0V900M1120 0V900M1360 0V900"/></g>
+  <path d="M925 90L1450 365L1038 778L545 518Z" fill="none" stroke="#d9785566" stroke-width="2"/>
+  <path d="M1030 168L1360 409L1007 702L720 462Z" fill="none" stroke="#ffffff40" stroke-width="2"/>
+  <circle cx="1120" cy="450" r="170" fill="#d97855"/>
+  <path d="M1090 370L1090 530L1215 450Z" fill="#fff"/>
+  <text x="105" y="160" fill="#e3b39f" font-family="Arial,sans-serif" font-size="21" font-weight="700" letter-spacing="5">PRISM / INTRODUCTION</text>
+  <text x="105" y="420" fill="#fff" font-family="Arial,sans-serif" font-size="116" font-weight="700" letter-spacing="-7">PRISM</text>
+  <text x="105" y="491" fill="#c6d0cf" font-family="Arial,sans-serif" font-size="38">업무를 하나의 흐름으로.</text>
+  <text x="105" y="780" fill="#a8b8b6" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="3">WORKSPACE + ERP</text>
+</svg>
