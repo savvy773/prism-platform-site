@@ -1,5 +1,5 @@
 node_modules/
-output/*
-!output/.gitkeep
-projects/*/output/*
-!projects/*/output/.gitkeep
+.env
+# Rendered files are rebuilt from script + audio. Narration audio stays in Git
+# so every machine renders the same voice without paying for TTS again.
+projects/*/output/

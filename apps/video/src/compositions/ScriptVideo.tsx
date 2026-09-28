@@ -1,18 +1,31 @@
 import { AbsoluteFill, Audio, Sequence, staticFile } from "remotion";
-import { SceneShell } from "../components/SceneShell";
-import type { VideoScript } from "../data/video-script";
-import { LandingScene } from "../scenes/LandingScenes";
+import {
+  audioPathOf,
+  sceneFrames as fallbackFrames,
+  type VideoScript,
+} from "../data/video-script";
+import { IllustratedScene } from "../illustrated/IllustratedScene";
+import { IllustratedShell } from "../illustrated/IllustratedShell";
 
-export const ScriptVideo = ({ script }: { script: VideoScript }) => {
+export type ScriptVideoProps = {
+  script: VideoScript;
+  sceneFrames?: number[];
+  speechSec?: number[];
+};
+
+export const ScriptVideo = ({
+  script,
+  sceneFrames,
+  speechSec,
+}: ScriptVideoProps) => {
   let cursor = 0;
   return (
     <AbsoluteFill>
       {script.scenes.map((scene, index) => {
         const from = cursor;
-        const durationInFrames = Math.round(scene.durationSec * script.fps);
-        const audioPath =
-          scene.audioFile ??
-          (script.tts?.enabled ? `${script.id}/audio/${scene.id}.mp3` : null);
+        const durationInFrames =
+          sceneFrames?.[index] ?? fallbackFrames(script, scene);
+        const audioPath = audioPathOf(script, scene);
         cursor += durationInFrames;
         return (
           <Sequence
@@ -20,14 +33,24 @@ export const ScriptVideo = ({ script }: { script: VideoScript }) => {
             from={from}
             durationInFrames={durationInFrames}
           >
-            <SceneShell
+            <IllustratedShell
               scene={scene}
               index={index}
+              total={script.scenes.length}
               durationFrames={durationInFrames}
+              speechSec={speechSec?.[index] ?? 0}
+              brand={script.brand ?? "PRISM"}
             >
-              <LandingScene scene={scene} />
-            </SceneShell>
-            {audioPath && <Audio src={staticFile(audioPath)} />}
+              <IllustratedScene
+                scene={scene}
+                brand={script.brand ?? "PRISM"}
+                projectId={script.id}
+                durationFrames={durationInFrames}
+              />
+            </IllustratedShell>
+            {audioPath && speechSec?.[index] ? (
+              <Audio src={staticFile(audioPath)} />
+            ) : null}
           </Sequence>
         );
       })}

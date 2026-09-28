@@ -5,9 +5,16 @@ set positional-arguments
 default:
     @just --list --unsorted
 
-# Video: dev, render, render:site, typecheck, lint, still.
-video action='dev':
-    @cd apps/video && pnpm run "$1"
+# Video studio (no args) or factory command: `just video make <id>`, `just video list`.
+video *args:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd apps/video
+    if [[ $# -eq 0 ]]; then exec pnpm dev; fi
+    case "$1" in
+        dev|typecheck|lint|check) exec pnpm run "$1" ;;
+        *) exec node scripts/video.mjs "$@" ;;
+    esac
 
 # Stage all changes and commit with a message based on the changed files.
 com:

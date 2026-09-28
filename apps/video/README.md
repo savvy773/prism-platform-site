@@ -1,5 +1,4 @@
-# PRISM video app
+# PRISM video factory
 
-Remotion Studio: `pnpm dev` · MP4: `pnpm render` · validation: `pnpm typecheck` and `pnpm lint`.
-
-Project structure, site export, and TTS instructions: [video workflow](../../docs/VIDEO_WORKFLOW.md).
+Script in, video out: `node scripts/video.mjs make <id>` (or `just video make <id>` from the repo root).
+Studio: `pnpm dev` · checks: `pnpm check`. Full guide: [video workflow](../../docs/VIDEO_WORKFLOW.md).

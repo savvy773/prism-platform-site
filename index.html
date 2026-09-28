@@ -37,7 +37,7 @@
             <p class="hero-lead">흩어진 일은 모으고, 중요한 흐름은 이어줍니다. PRISM은 협업을 위한 Workspace와 운영을 위한 ERP를 하나의 맥락으로 연결합니다.</p>
             <div class="hero-actions">
               <a class="button button-primary" href="#workspace">기능 살펴보기 <span aria-hidden="true">↗</span></a>
-              <a class="button button-quiet" href="#film">52초 영상 보기 <span aria-hidden="true">↗</span></a>
+              <a class="button button-quiet" href="#film">소개 영상 보기 <span aria-hidden="true">▶</span></a>
             </div>
           </div>
           <div class="hero-visual">
@@ -118,8 +118,79 @@
       </section>
 
       <section class="section film" id="film" aria-labelledby="film-title">
-        <div class="container film-intro"><div><p class="eyebrow">06 / INTRODUCTION FILM</p><h2 id="film-title">52초로 보는 PRISM.</h2></div><p>Workspace와 ERP가 어떻게 하나의 흐름으로 이어지는지, 작은 프리즘 가이드와 함께 살펴보세요. 영어 내레이션이 포함되어 있습니다.</p></div>
-        <div class="container"><div class="film-frame"><video controls playsinline preload="metadata" poster="./assets/video-poster.png" aria-label="PRISM 플랫폼 52초 소개 영상"><source src="./media/prism-landing-intro.mp4" type="video/mp4" />브라우저가 MP4 영상을 지원하지 않습니다.</video></div><p class="film-note">이 영상의 화면과 데이터는 제품 개념을 설명하기 위한 시각화입니다.</p></div>
+        <div class="container film-intro">
+          <div><p class="eyebrow">06 / PRISM FILMS</p><h2 id="film-title">영상으로 만나는 PRISM.</h2></div>
+          <p>프리즘 가이드와 김 대리가 PRISM 구석구석을 안내합니다. 한국어 내레이션과 자막, 챕터가 들어 있어요. 보고 싶은 장면을 눌러 바로 이동해 보세요.</p>
+        </div>
+        <div class="container film-stage">
+          <div class="film-player">
+            <div class="film-frame">
+              <video id="film-video" controls playsinline preload="metadata" poster="./media/prism-tour-ko.png" aria-label="PRISM 기능 투어 영상">
+                <source src="./media/prism-tour-ko.mp4" type="video/mp4" />
+                <track kind="captions" srclang="ko" label="한국어" src="./media/prism-tour-ko.vtt" />
+                브라우저가 MP4 영상을 지원하지 않습니다.
+              </video>
+            </div>
+            <div class="film-meta">
+              <div>
+                <p class="film-kicker" id="film-kicker">NEW · 2:45</p>
+                <h3 id="film-name">PRISM 기능 투어</h3>
+              </div>
+              <p class="film-note">실제 화면은 예시 데이터로 촬영했고, 일러스트 화면은 이해를 돕기 위한 예시입니다.</p>
+            </div>
+            <div class="film-chapters" id="film-chapters" aria-label="챕터"></div>
+          </div>
+          <ul class="film-list" aria-label="영상 목록">
+            <li>
+              <button class="film-card is-active" type="button" aria-pressed="true"
+                data-src="./media/prism-tour-ko.mp4" data-poster="./media/prism-tour-ko.png" data-track="./media/prism-tour-ko.vtt"
+                data-title="PRISM 기능 투어" data-kicker="NEW · 2:45"
+                data-chapters="0:00 인트로|0:21 WEB 워크스페이스|1:12 ERP|1:52 경영 보고|2:03 공통 기반|2:13 달라지는 점|2:25 앞으로">
+                <span class="film-thumb"><img src="./media/prism-tour-ko.png" alt="" loading="lazy" /><span class="film-time">2:45</span></span>
+                <span class="film-card-copy"><strong>PRISM 기능 투어</strong><span>문서 허브부터 경영 보고까지, 실제 화면과 함께 둘러보기</span></span>
+              </button>
+            </li>
+            <li>
+              <button class="film-card" type="button" aria-pressed="false"
+                data-src="./media/prism-intro-ko.mp4" data-poster="./media/prism-intro-ko.png" data-track="./media/prism-intro-ko.vtt"
+                data-title="3분 만에 보는 PRISM" data-kicker="INTRO · 3:33"
+                data-chapters="0:00 인트로|0:11 문제|0:40 PRISM 소개|1:00 Workspace|1:36 ERP|2:01 연결|2:13 무엇이 좋아질까|2:46 PRISM과 함께하는 하루|3:13 정리">
+                <span class="film-thumb"><img src="./media/prism-intro-ko.png" alt="" loading="lazy" /><span class="film-time">3:33</span></span>
+                <span class="film-card-copy"><strong>3분 만에 보는 PRISM</strong><span>흩어진 업무가 하나로 모이는 이야기</span></span>
+              </button>
+            </li>
+          </ul>
+        </div>
+        <script>
+          (() => {
+            const video = document.getElementById("film-video");
+            const chapters = document.getElementById("film-chapters");
+            const cards = [...document.querySelectorAll(".film-card")];
+            const seconds = (stamp) => stamp.split(":").reduce((sum, part) => sum * 60 + Number(part), 0);
+            const renderChapters = (list) => {
+              chapters.replaceChildren(...list.split("|").map((entry) => {
+                const [stamp, ...name] = entry.split(" ");
+                const button = document.createElement("button");
+                button.type = "button";
+                button.innerHTML = `<span>${stamp}</span>${name.join(" ")}`;
+                button.addEventListener("click", () => { video.currentTime = seconds(stamp); video.play(); });
+                return button;
+              }));
+            };
+            cards.forEach((card) => card.addEventListener("click", () => {
+              cards.forEach((other) => { other.classList.toggle("is-active", other === card); other.setAttribute("aria-pressed", String(other === card)); });
+              video.poster = card.dataset.poster;
+              video.querySelector("source").src = card.dataset.src;
+              video.querySelector("track").src = card.dataset.track;
+              video.setAttribute("aria-label", `${card.dataset.title} 영상`);
+              video.load();
+              document.getElementById("film-name").textContent = card.dataset.title;
+              document.getElementById("film-kicker").textContent = card.dataset.kicker;
+              renderChapters(card.dataset.chapters);
+            }));
+            renderChapters(cards[0].dataset.chapters);
+          })();
+        </script>
       </section>
 
       <section class="closing" aria-labelledby="closing-title"><div class="container closing-inner"><p class="eyebrow eyebrow-dark">07 / DIRECTION</p><h2 id="closing-title">Less chaos.<br />More clarity.</h2><p>PRISM은 현재 개발 중인 프로젝트입니다. Workspace와 ERP를 실제 업무 흐름에 맞춰 단계적으로 완성합니다.</p></div></section>

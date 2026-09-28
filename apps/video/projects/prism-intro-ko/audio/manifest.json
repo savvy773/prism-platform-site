@@ -1,0 +1,73 @@
+{
+  "voice": "gemini:gemini-3.8-flash-lite-tts/Kore",
+  "scenes": {
+    "hello": {
+      "hash": "449bb790c84eca95",
+      "durationSec": 10.464
+    },
+    "monday-chaos": {
+      "hash": "236d230715f5c784",
+      "durationSec": 15.048
+    },
+    "real-problem": {
+      "hash": "34c1a1cb57f4412d",
+      "durationSec": 12.216
+    },
+    "meet-prism": {
+      "hash": "04d3c827afaf4261",
+      "durationSec": 7.488
+    },
+    "two-areas": {
+      "hash": "1cbbe742d6e146ae",
+      "durationSec": 10.704
+    },
+    "workspace-docs": {
+      "hash": "6b9fb9f9581fe35e",
+      "durationSec": 13.176
+    },
+    "weekly-report": {
+      "hash": "1108716cc2c51599",
+      "durationSec": 10.224
+    },
+    "projects-schedule": {
+      "hash": "1470a9db46aa6e2f",
+      "durationSec": 10.056
+    },
+    "erp-overview": {
+      "hash": "4a5ec55b9acd184c",
+      "durationSec": 11.328
+    },
+    "erp-flow": {
+      "hash": "3601711254a40c61",
+      "durationSec": 11.424
+    },
+    "connected": {
+      "hash": "afe44fbbf590cea5",
+      "durationSec": 11.256
+    },
+    "before-after": {
+      "hash": "8a2f65ab977b5dc3",
+      "durationSec": 18.648
+    },
+    "improvements": {
+      "hash": "2ab5e05325929d89",
+      "durationSec": 12.408
+    },
+    "a-day": {
+      "hash": "fc68ea3a9fadaa05",
+      "durationSec": 15.216
+    },
+    "for-managers": {
+      "hash": "e72e23a1b9c85122",
+      "durationSec": 10.224
+    },
+    "recap": {
+      "hash": "b28ce5b1f5aa174f",
+      "durationSec": 10.104
+    },
+    "closing": {
+      "hash": "b3cfa3146ccf97e1",
+      "durationSec": 7.416
+    }
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "voice": "gemini:gemini-3.8-flash-lite-tts/Kore",
+  "scenes": {
+    "hello": {
+      "hash": "b321cc3ad2c336c8",
+      "durationSec": 9.024,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "two-halves": {
+      "hash": "9de1c2afbb8aaf75",
+      "durationSec": 10.248,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "home-dashboard": {
+      "hash": "e5ee289e49a544b7",
+      "durationSec": 9.504,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "doc-hub": {
+      "hash": "c509b4708385192b",
+      "durationSec": 10.248,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "weekly-report": {
+      "hash": "f98e382abe639434",
+      "durationSec": 9.888,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "calendar": {
+      "hash": "4396bffd963d08cd",
+      "durationSec": 8.928,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "projects": {
+      "hash": "cc5ade0d54cd33f6",
+      "durationSec": 7.944,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "erp-modules": {
+      "hash": "1c5bf00d24730930",
+      "durationSec": 9.648,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "file-import": {
+      "hash": "18dd5e10506e086f",
+      "durationSec": 9.744,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "approval": {
+      "hash": "25f37c65e480e771",
+      "durationSec": 9.048,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "closing-audit": {
+      "hash": "1dd271764c63ec14",
+      "durationSec": 8.544,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "reports": {
+      "hash": "7b996a5306e391d6",
+      "durationSec": 10.128,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "one-login": {
+      "hash": "7064e470021dc422",
+      "durationSec": 8.544,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "before-after": {
+      "hash": "5a3eeedf16a3e345",
+      "durationSec": 11.256,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "roadmap": {
+      "hash": "559fea15b42a46da",
+      "durationSec": 9.096,
+      "model": "gemini-3.8-flash-lite-tts"
+    },
+    "closing": {
+      "hash": "e928ae97d87f06d3",
+      "durationSec": 9.048,
+      "model": "gemini-3.8-flash-lite-tts"
+    }
+  }
+}

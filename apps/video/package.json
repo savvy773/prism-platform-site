@@ -5,16 +5,13 @@
   "packageManager": "pnpm@12.6.0",
   "scripts": {
     "dev": "remotion studio src/index.ts",
-    "studio": "remotion studio src/index.ts",
-    "compositions": "remotion compositions src/index.ts",
-    "render": "remotion render src/index.ts PrismLandingIntro projects/prism-landing-intro/output/prism-landing-intro.mp4",
-    "render:site": "remotion render src/index.ts PrismLandingIntro ../../media/prism-landing-intro.mp4",
-    "still": "remotion still src/index.ts PrismLandingIntro projects/prism-landing-intro/output/prism-landing-still.png --frame=1500",
-    "tts": "node scripts/tts.mjs prism-landing-intro",
+    "video": "node scripts/video.mjs",
     "typecheck": "tsc --noEmit",
-    "lint": "biome check ."
+    "lint": "biome check .",
+    "check": "tsc --noEmit && biome check . && remotion compositions src/index.ts"
   },
   "dependencies": {
+    "@remotion/fonts": "4.0.529",
     "react": "19.3.0",
     "react-dom": "19.3.0",
     "remotion": "4.0.529",
