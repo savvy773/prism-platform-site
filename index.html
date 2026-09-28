@@ -50,27 +50,20 @@
       </section>
 
       <section class="section film" id="film" aria-labelledby="film-title">
-        <div class="container film-intro">
-          <div><p class="eyebrow">01 / INTRODUCTION FILM</p><h2 id="film-title">3분 만에 보는 PRISM.</h2></div>
-          <p>프리즘 가이드와 김 대리의 하루를 따라 Workspace와 ERP가 하나로 이어지는 모습을 살펴보세요. 실제 화면과 한국어 내레이션, 자막이 들어 있어요. 챕터를 눌러 원하는 장면으로 바로 이동할 수 있습니다.</p>
-        </div>
-        <div class="container">
-          <div class="film-player">
-            <div class="film-frame">
-              <video id="film-video" controls playsinline preload="metadata" poster="./media/prism-intro-ko.png" aria-label="3분 만에 보는 PRISM 영상">
-                <source src="./media/prism-intro-ko.mp4" type="video/mp4" />
-                <track kind="captions" srclang="ko" label="한국어" src="./media/prism-intro-ko.vtt" />
-                브라우저가 MP4 영상을 지원하지 않습니다.
-              </video>
-            </div>
-            <div class="film-meta">
-              <div>
-                <p class="film-kicker">INTRO · 3:33</p>
-                <h3>3분 만에 보는 PRISM</h3>
-              </div>
-              <p class="film-note">실제 화면은 예시 데이터로 촬영했고, 일러스트 화면은 이해를 돕기 위한 예시입니다.</p>
-            </div>
-            <div class="film-chapters" id="film-chapters" aria-label="챕터" data-chapters="0:00 인트로|0:11 문제|0:40 PRISM 소개|1:00 Workspace|1:36 ERP|2:01 연결|2:13 무엇이 좋아질까|2:46 PRISM과 함께하는 하루|3:13 정리"></div>
+        <div class="container film-layout">
+          <div class="film-copy">
+            <p class="eyebrow">01 / INTRODUCTION FILM · 3:33</p>
+            <h2 id="film-title">3분 만에 보는 PRISM.</h2>
+            <p class="film-lead">프리즘 가이드와 김 대리의 하루를 따라 Workspace와 ERP가 하나로 이어지는 모습을 살펴보세요. 실제 화면, 한국어 내레이션과 자막이 들어 있어요.</p>
+            <div class="film-chapters" id="film-chapters" aria-label="챕터 (누르면 해당 장면으로 이동)" data-chapters="0:00 인트로|0:11 문제|0:40 PRISM 소개|1:00 Workspace|1:36 ERP|2:01 연결|2:13 무엇이 좋아질까|2:46 함께하는 하루|3:13 정리"></div>
+            <p class="film-note">실제 화면은 예시 데이터로 촬영했고, 일러스트 화면은 이해를 돕기 위한 예시입니다.</p>
+          </div>
+          <div class="film-frame">
+            <video id="film-video" controls playsinline preload="metadata" poster="./media/prism-intro-ko.png" aria-label="3분 만에 보는 PRISM 영상">
+              <source src="./media/prism-intro-ko.mp4" type="video/mp4" />
+              <track kind="captions" srclang="ko" label="한국어" src="./media/prism-intro-ko.vtt" />
+              브라우저가 MP4 영상을 지원하지 않습니다.
+            </video>
           </div>
         </div>
         <script>
