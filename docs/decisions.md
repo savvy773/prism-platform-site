@@ -11,3 +11,5 @@
 - Focus now: internal promotional videos for YouTube. Folder layout (scenario folders, possibly a separate factory repo) and a signature main character come later; see "앞으로의 방향" in VIDEO_WORKFLOW.md.
 - Sound effects are synthesized in code (no third-party samples) so they are license-free and reproducible.
 - Gemini `gemini-3.8-flash-lite-tts` is the default voice model, with `gemini-3.8-flash-tts` as the quota fallback.
+- The only public contact is the development inquiry address `juns@prismlight.co.kr`, shown in the site footer and the README.
+- Commits carry no AI co-author trailers, so GitHub Contributors lists only the owner. History was rewritten once on 2026-09-28 to remove existing ones.

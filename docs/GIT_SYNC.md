@@ -63,9 +63,19 @@ git push
 
 되돌리고 싶으면 `git rebase --abort`로 pull 전 상태로 돌아갑니다.
 
+## 이력을 다시 쓴 뒤 (2026-09-28)
+
+커밋 메시지의 `Co-Authored-By: Claude` 줄을 지우려고 `main` 이력을 다시 쓰고 강제 푸시했습니다. 그 전에 받아 둔 PC에서는 한 번만 아래를 실행합니다. 올리지 않은 작업이 있으면 먼저 따로 백업하세요.
+
+```bash
+git fetch
+git reset --hard origin/main
+```
+
 ## 자주 하는 실수
 
 - 시작 전에 `pull`을 잊고 작업함 → 끝날 때 `git pull --rebase` 후 `push`하면 대부분 자동으로 합쳐집니다.
 - `.env`를 커밋하려 함 → `.gitignore`에 있어서 `git add -A`로는 올라가지 않습니다. `git status`에 보이면 멈추고 확인하세요.
 - 양쪽에서 같은 대본(`script.ts`)을 동시에 고침 → 한쪽에서 먼저 `push`하고 다른 쪽은 `pull` 후 작업하세요.
 - `main`에 `push`하면 GitHub Pages 사이트가 바로 갱신됩니다. 공개되면 안 되는 영상은 `media/`에 넣지 마세요.
+- 커밋 메시지에 AI 공동작성자(`Co-Authored-By`) 줄을 넣음 → GitHub Contributors에 표시되므로 넣지 않습니다.

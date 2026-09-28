@@ -6,6 +6,8 @@
 - `apps/video` is an independent video factory. Do not touch the separate WEB, ERP, or Auth applications from here.
 - Illustrated dashboards are labeled `예시 화면`; screenshots must show example data only. No invented metrics, internal hostnames, emails, or real business figures.
 - Guides and decisions go in `docs/`; keep the root README short.
+- The development inquiry address `juns@prismlight.co.kr` (footer, README) is the one allowed public email.
+- Commit messages carry no `Co-Authored-By` or other AI attribution lines.
 
 ## Video factory
 
